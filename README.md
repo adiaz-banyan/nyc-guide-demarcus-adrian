@@ -1,5 +1,7 @@
 # nyc-guide-demarcus-adrian
 
+## by Demarcus Williams & Adrian Diaz
+
 New York City Guide - Django Project
 To start building the project:
 
