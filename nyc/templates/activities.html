@@ -1,0 +1,11 @@
+<h1>{{ activity | title }}</h1>
+
+<ul>
+    {% for activity in activities %}
+    <li>
+        <a href="#"
+            >{{ activity|title }}</a
+        >
+    </li>
+    {% endfor %}
+</ul>
