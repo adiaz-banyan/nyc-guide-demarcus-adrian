@@ -20,12 +20,10 @@ class BoroughView(View):
 
 class ActivityView(View):
     def get(self, request, borough, activity):
-        print('borough', borough)
-        print('activity', activity)
         return render(
             request = request,
             template_name = 'activities.html',
-            context= {'activity': activity, 'activities': boroughs[borough][activity].keys(), }
+            context= {'activity': activity, 'borough': borough, 'venues': boroughs[borough][activity].keys(), }
         )
 
 
