@@ -14,19 +14,26 @@ class BoroughView(View):
         return render(
             request=request,
             template_name='borough.html',
-            context={'borough': borough, 'activities': boroughs[borough].keys()},
+            context={'borough': borough,
+                     'activities': boroughs[borough].keys()},
         )
 
 
 class ActivityView(View):
     def get(self, request, borough, activity):
         return render(
-            request = request,
-            template_name = 'activities.html',
-            context= {'activity': activity, 'borough': borough, 'venues': boroughs[borough][activity].keys(), }
+            request=request,
+            template_name='activities.html',
+            context={'activity': activity, 'borough': borough,
+                     'venues': boroughs[borough][activity].keys(), }
         )
 
 
 class VenueView(View):
-    def get(self, request):
-        pass
+    def get(self, request, borough, activity, venue):
+        return render(
+            request=request,
+            template_name='venue.html',
+            context={
+                'description': boroughs[borough][activity][venue]['description'], 'venue': venue}
+        )
