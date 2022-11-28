@@ -1,8 +1,8 @@
-# nyc-guide-demarcus-adrian
-
-## by Demarcus Williams & Adrian Diaz
+## Demarcus Williams Dwilliams-banyan
+## Adrian Diaz tragic-doggy
 
 New York City Guide - Django Project
+
 To start building the project:
 
 1. Create a virtual environment
